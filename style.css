@@ -1,45 +1,28 @@
-/*
-    -------------------------------------------
-    REQUISITOS CSS GERAIS
-    -------------------------------------------
-*/
-
-/* Requisito: Background / gradiente na página */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
     color: #333;
 }
 
-/* Requisito: Formatação Textual (3 propriedades) */
 .texto-historia {
     font-size: 1.1em;
     line-height: 1.6;
-    letter-spacing: 0.02em; /* Propriedade 1 */
-    text-align: justify;   /* Propriedade 2 */
-    color: #555;           /* Propriedade 3 */
+    letter-spacing: 0.02em;
+    text-align: justify;
+    color: #555;
 }
 
-/* Requisito: Sombra (Texto) */
 .titulo-principal {
     color: #cc0000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Requisito: Pseudo-classes */
 .destaque-historia:hover {
     color: #004d99;
     font-style: italic;
     cursor: pointer;
 }
 
-/*
-    -------------------------------------------
-    REQUISITOS CSS: LISTAS, TABELAS E FORMULÁRIOS
-    -------------------------------------------
-*/
-
-/* Requisito: Formatação das Listas com CSS */
 .lista-detalhes {
     list-style-type: '🚗 ';
     padding-left: 20px;
@@ -53,7 +36,6 @@ body {
     border-radius: 4px;
 }
 
-/* Requisito: Formatação de Tabelas com CSS */
 .tabela-formatada {
     border: 2px solid #cc0000;
     border-collapse: collapse;
@@ -68,7 +50,6 @@ body {
     padding: 10px;
 }
 
-/* Requisito: Formatação do Formulário */
 .form-formatado {
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -76,43 +57,31 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .botao-submit {
-    background-color: #004d99 !important;
-    border-color: #004d99 !important;
-    transition: background-color 0.3s ease; /* Requisito: Transição */
+    background-color: #004d99;
+    border-color: #004d99;
+    transition: background-color 0.3s ease;
 }
 .botao-submit:hover {
-    background-color: #007bff !important;
+    background-color: #007bff;
 }
 
-/*
-    -------------------------------------------
-    REQUISITOS CSS: DIVs, FLEXBOX E ANIMAÇÃO/TRANSIÇÃO
-    -------------------------------------------
-*/
-
-/* Requisito: Uso e Formatação de DIV´s (tamanhos, posicionamento, bordas, margens/padding) */
 .div-formulario {
-    /* Tamanhos (largura via Bootstrap col-lg-6) */
-    /* Margens/Padding (via Bootstrap p-4, my-5) */
     border: 1px solid #ddd; /* Borda */
     padding: 20px;
     border-radius: 10px;
-    /* Sombra (DIV) */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     background-color: #f9f9f9;
 }
 
-/* Requisito: Flexbox (3 propriedades diferentes) */
 .flexbox-header {
-    display: flex; /* Propriedade 1 */
-    justify-content: space-between; /* Propriedade 2 */
-    align-items: center; /* Propriedade 3 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .lista-menu {
-    gap: 15px; /* Adicionando espaço entre os itens do menu */
+    gap: 15px;
 }
 
-/* Requisito: Animação/Transição (Animação na imagem no carregamento) */
 @keyframes fadeInScale {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
@@ -122,25 +91,16 @@ body {
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 20px;
-    /* Transição aplicada no hover */
     transition: transform 0.5s ease-in-out;
 }
 .miata-img-container:hover {
-    transform: scale(1.03); /* Transição: aumenta um pouco no hover */
+    transform: scale(1.03);
 }
 
-
-/*
-    -------------------------------------------
-    REQUISITOS CSS: RESPONSIVIDADE
-    -------------------------------------------
-*/
-
-/* Requisito: Unidades de medidas responsivas (vmax/vw/vh) */
 .logo-miata {
-    font-size: 4vw; /* Font-size responsivo */
+    font-size: 4vw; 
     padding: 0.5rem;
-    color: white !important;
+    color: white;
 }
 @media (max-width: 768px) {
     .logo-miata {
@@ -148,10 +108,8 @@ body {
     }
 }
 
-
-/* Requisito: Imagem/Video/Background Responsiva */
 .miata-img {
-    max-width: 100%; /* Bootstrap: img-fluid */
+    max-width: 100%;
     height: auto;
 }
 .video-responsivo {
@@ -160,22 +118,16 @@ body {
     border-radius: 8px;
 }
 
-/* Requisito: Media Query em ao menos uma página (Aqui no index.html) */
-/* Altera o background-color do header em telas menores */
 @media (max-width: 992px) {
     .bg-dark {
-        background-color: #555 !important;
+        background-color: #555;
     }
 }
 
-
-/* Requisito: Media print em ao menos uma página (Para impressão do index.html) */
 @media print {
-    /* Esconde elementos desnecessários na impressão */
     header, footer, .form-formatado, .video-responsivo {
         display: none;
     }
-    /* Adapta cores para impressão (preto e branco) */
     body {
         background: white;
         color: black;
@@ -186,7 +138,7 @@ body {
         border-bottom: 2px solid black;
         padding-bottom: 10px;
     }
-    a:not([href]):not([tabindex]) { /* Links não impressos */
+    a:not([href]):not([tabindex]) { 
         color: inherit;
         text-decoration: none;
     }
